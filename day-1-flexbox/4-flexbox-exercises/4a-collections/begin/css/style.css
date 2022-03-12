@@ -57,8 +57,7 @@ img {
 
 figure {
   position: relative;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 3% 0;
 }
 
 figcaption {
@@ -119,9 +118,25 @@ a {
 /* At this breakpoint, transition to 2 figures per line */
 
 @media (min-width: 550px) {
+  figure {
+    margin: 1% 0;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .row > li {
+    flex-basis: calc((100% - 0.5rem) / 2);
+  }
 }
 
 /* At this breakpoint, transition to 3 figures per line */
 
 @media (min-width: 800px) {
+  .row > li {
+    flex-basis: calc((100% - 1rem) / 3);
+  }
 }
